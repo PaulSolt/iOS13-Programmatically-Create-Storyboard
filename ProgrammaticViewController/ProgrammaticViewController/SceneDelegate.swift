@@ -15,6 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+        // NOTE: You must delete the `Storyboard Name` row from your Info.plist
+        // setting under the `Application Scene Manifest` or this code won't run
+        
         guard let scene = scene as? UIWindowScene else { return }
         let window = UIWindow(windowScene: scene)
         
