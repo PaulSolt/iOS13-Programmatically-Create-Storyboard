@@ -12,7 +12,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         // NOTE: You must delete the `Storyboard Name` row from your Info.plist
@@ -21,7 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = scene as? UIWindowScene else { return }
         let window = UIWindow(windowScene: scene)
         
-        let viewController = CustomViewController(name: "CustomViewController")
+        // Create controller/model objects to pass to ViewController
+        // using dependency injection (pass your data instead of using singletons)
+        let modelController = ModelController()
+        
+        let viewController = CustomViewController(modelController: modelController)
         window.rootViewController = viewController
         window.makeKeyAndVisible()
         
