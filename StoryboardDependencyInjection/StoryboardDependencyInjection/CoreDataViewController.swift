@@ -40,6 +40,61 @@ class CoreDataViewController: UIViewController {
 
         label.textColor = .white
         view.backgroundColor = .systemRed
+        
+//        createData()
+        
+        fetchData()
+    }
+    
+    func createData() {
+        let context = container.viewContext
+
+        
+        for i in 1...5 {
+            let setting = Setting(context: context)
+            
+            setting.name = "Setting \(i)"
+            setting.value = "Off"
+            print("Creating: \(setting.name)")
+//            context.insert(setting)
+        }
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    func fetchData() {
+
+        
+        let context = container.viewContext
+        let fetchRequest: NSFetchRequest = Setting.fetchRequest()
+//        fetchRequest.predicate = NSPredicate(format: "name == %@", "Developer")
+        fetchRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Setting.name, ascending: true)]
+        
+        container.performBackgroundTask { (backgroundContext) in
+            // todo
+            // save
+        }
+        
+        do {
+            let settings = try context.fetch(fetchRequest)
+            print("Settings: \(settings)")
+            for setting in settings {
+                print("Setting: \(setting.name)")
+            }
+            
+        } catch {
+            print("Error: \(error)")
+        }
+//        do {
+//            let fetchedEmployees = try context.execute(request: fetchRequest) as! [Setting]
+//        } catch {
+//            fatalError("Failed to fetch employees: \(error)")
+//        }
+//
     }
 
 

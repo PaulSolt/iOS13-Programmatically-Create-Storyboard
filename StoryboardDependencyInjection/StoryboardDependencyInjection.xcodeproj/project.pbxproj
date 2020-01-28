@@ -14,6 +14,10 @@
 		BD6C7B6123DDFB9D0001D779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD6C7B6023DDFB9D0001D779 /* Assets.xcassets */; };
 		BD6C7B6423DDFB9D0001D779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6C7B6223DDFB9D0001D779 /* LaunchScreen.storyboard */; };
 		BD6C7B6D23DDFCFE0001D779 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD6C7B6B23DDFCFE0001D779 /* Model.xcdatamodeld */; };
+		BD6C7B7C23DE0C6C0001D779 /* Setting+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6C7B7A23DE0C6C0001D779 /* Setting+CoreDataClass.swift */; };
+		BD6C7B7D23DE0C6C0001D779 /* Setting+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6C7B7B23DE0C6C0001D779 /* Setting+CoreDataProperties.swift */; };
+		BD6C7B8023DE0FE20001D779 /* Control+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6C7B7E23DE0FE20001D779 /* Control+CoreDataClass.swift */; };
+		BD6C7B8123DE0FE20001D779 /* Control+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6C7B7F23DE0FE20001D779 /* Control+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		BD6C7B6323DDFB9D0001D779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD6C7B6523DDFB9D0001D779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD6C7B6C23DDFCFE0001D779 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		BD6C7B7A23DE0C6C0001D779 /* Setting+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Setting+CoreDataClass.swift"; path = "StoryboardDependencyInjection/Setting+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BD6C7B7B23DE0C6C0001D779 /* Setting+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Setting+CoreDataProperties.swift"; path = "StoryboardDependencyInjection/Setting+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		BD6C7B7E23DE0FE20001D779 /* Control+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Control+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD6C7B7F23DE0FE20001D779 /* Control+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Control+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,10 @@
 				BD6C7B5923DDFB9B0001D779 /* SceneDelegate.swift */,
 				BD6C7B5B23DDFB9B0001D779 /* CoreDataViewController.swift */,
 				BD6C7B6B23DDFCFE0001D779 /* Model.xcdatamodeld */,
+				BD6C7B7A23DE0C6C0001D779 /* Setting+CoreDataClass.swift */,
+				BD6C7B7B23DE0C6C0001D779 /* Setting+CoreDataProperties.swift */,
+				BD6C7B7E23DE0FE20001D779 /* Control+CoreDataClass.swift */,
+				BD6C7B7F23DE0FE20001D779 /* Control+CoreDataProperties.swift */,
 				BD6C7B5D23DDFB9B0001D779 /* Main.storyboard */,
 				BD6C7B6023DDFB9D0001D779 /* Assets.xcassets */,
 				BD6C7B6223DDFB9D0001D779 /* LaunchScreen.storyboard */,
@@ -141,9 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD6C7B7C23DE0C6C0001D779 /* Setting+CoreDataClass.swift in Sources */,
 				BD6C7B5C23DDFB9B0001D779 /* CoreDataViewController.swift in Sources */,
 				BD6C7B5823DDFB9B0001D779 /* AppDelegate.swift in Sources */,
 				BD6C7B5A23DDFB9B0001D779 /* SceneDelegate.swift in Sources */,
+				BD6C7B8023DE0FE20001D779 /* Control+CoreDataClass.swift in Sources */,
+				BD6C7B7D23DE0C6C0001D779 /* Setting+CoreDataProperties.swift in Sources */,
+				BD6C7B8123DE0FE20001D779 /* Control+CoreDataProperties.swift in Sources */,
 				BD6C7B6D23DDFCFE0001D779 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
