@@ -8,6 +8,9 @@ Around lines ~40 you can switch (uncomment/comment) between either an entirely p
 window.rootViewController = customVC
 //window.rootViewController = storyboardVC
 ```
+With iOS13+ you now have a Scene file that will manage the window and that's where I'm setting up the UI, instead of the AppDelegate.
+
+**NOTE**: You must delete the `Storyboard Name` row from your Info.plist setting under the `Application Scene Manifest` or this programmatic code won't run, instead it'll load your Main.storyboard.
 
 ## Thoughts
 
