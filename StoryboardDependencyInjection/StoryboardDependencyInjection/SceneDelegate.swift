@@ -11,6 +11,10 @@ import CoreData
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    // TODO: Remove from Github Project (Separate project)
+    // TODO: Pass the MOC, not the PersistentContainer? Dave Delong
+    // TODO: Don't use Core Data in this sample project
+    
     var window: UIWindow?
 
     lazy var persistentContainer: NSPersistentContainer = {

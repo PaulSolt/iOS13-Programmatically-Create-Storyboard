@@ -24,8 +24,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // using dependency injection (pass your data instead of using singletons)
         let modelController = ModelController()
         
-        let viewController = CustomViewController(modelController: modelController)
-        window.rootViewController = viewController
+        
+        // Option 1: Go entirely programmatic
+        let customVC = CustomViewController(modelController: modelController)
+        
+        // Option 2: Programmatically load a storyboard and pass model data to it via dependency injection
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let dataString = "StoryboardViewController"
+        let storyboardVC = storyboard.instantiateViewController(identifier: "StoryboardViewController") { coder in
+            
+            // Now you can pass any kind of model object (A String in this example)
+            StoryboardViewController(coder: coder, name: dataString)
+        }
+    
+        
+        // TODO: Switch between the two view controllers by uncommenting/commenting
+        window.rootViewController = customVC
+//        window.rootViewController = storyboardVC
+        
         window.makeKeyAndVisible()
         
         self.window = window

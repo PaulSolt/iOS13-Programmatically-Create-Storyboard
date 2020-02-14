@@ -7,20 +7,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Storyboard View Controller-->
         <scene sceneID="PtK-mJ-mEV">
             <objects>
-                <viewController id="gPh-o5-fsW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoryboardViewController" id="gPh-o5-fsW" customClass="StoryboardViewController" customModule="ProgrammaticViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HM3-dk-nED">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeI-5O-q2F">
+                                <rect key="frame" x="181" y="431.5" width="52.5" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BeI-5O-q2F" firstAttribute="centerX" secondItem="HM3-dk-nED" secondAttribute="centerX" id="56i-W9-mYC"/>
+                            <constraint firstItem="BeI-5O-q2F" firstAttribute="centerY" secondItem="HM3-dk-nED" secondAttribute="centerY" id="Uyg-24-9Bd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ppQ-6c-7Lg"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="BeI-5O-q2F" id="dNC-XW-yCZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OdF-HJ-t1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120" y="85"/>
+            <point key="canvasLocation" x="118.84057971014494" y="84.375"/>
         </scene>
     </scenes>
 </document>
